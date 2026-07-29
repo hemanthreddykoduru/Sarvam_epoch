@@ -194,7 +194,7 @@ const VoiceDemo = () => {
                 </div>
               </div>
               <Button 
-                variant={playing === voice.id ? "default" : "outline"} 
+                variant={playing === voice.id ? "primary" : "outline"} 
                 className="w-full gap-2"
                 onClick={() => handlePlay(voice)}
               >
@@ -218,14 +218,6 @@ export function Landing() {
   const { createCheckout, isLoading } = usePayment()
   const { user } = useAuth()
 
-  const subscribe = (plan: typeof PLANS[number]) => {
-    if (!user) {
-      toast.error('Create an account first')
-      navigate('/register')
-      return
-    }
-    createCheckout(plan.name.toLowerCase(), parseInt(plan.price.replace(/[₹,]/g, ''), 10))
-  }
 
   return (
     <div className="min-h-screen bg-background text-foreground">

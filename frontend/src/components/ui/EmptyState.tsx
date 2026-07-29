@@ -13,7 +13,7 @@ export function EmptyState({
 }: {
   icon: React.ComponentType<{ className?: string }>
   title: string
-  description?: string
+  description?: React.ReactNode
   action?: React.ReactNode
   className?: string
 }) {

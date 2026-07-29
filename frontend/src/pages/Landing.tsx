@@ -174,7 +174,7 @@ const VoiceDemo = () => {
   };
 
   return (
-    <section id="voice-demo" className="border-b bg-card">
+    <section id="ai-voices" className="border-b bg-card">
       <audio ref={audioRef} onEnded={() => setPlaying(null)} />
       <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 md:py-28 text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Listen to our AI Voices</h2>

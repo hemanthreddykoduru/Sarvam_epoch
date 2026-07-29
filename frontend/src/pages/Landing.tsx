@@ -236,7 +236,7 @@ export function Landing() {
           <div className="hidden items-center gap-8 md:flex">
             <a href="#features" className="text-sm text-muted-foreground transition-colors hover:text-foreground">What it does</a>
             <a href="#how-it-works" className="text-sm text-muted-foreground transition-colors hover:text-foreground">How it works</a>
-            <a href="#voice-demo" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Demo Call</a>
+            <a href="tel:8071580625" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Demo Call</a>
             <a href="#pricing" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Pricing</a>
             <a href="mailto:hemanthreddykoduru2005@gmail.com?subject=About%20The%20Deal%20My%20Calls" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Contact</a>
           </div>
@@ -265,7 +265,7 @@ export function Landing() {
           <div className="md:hidden border-t bg-background/95 backdrop-blur px-4 py-4 space-y-4">
             <a href="#features" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-medium transition-colors hover:text-primary">What it does</a>
             <a href="#how-it-works" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-medium transition-colors hover:text-primary">How it works</a>
-            <a href="#voice-demo" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-medium transition-colors hover:text-primary">Demo Call</a>
+            <a href="tel:8071580625" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-medium transition-colors hover:text-primary">Demo Call</a>
             <a href="#pricing" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-medium transition-colors hover:text-primary">Pricing</a>
             <a href="mailto:hemanthreddykoduru2005@gmail.com?subject=About%20The%20Deal%20My%20Calls" className="block text-base font-medium transition-colors hover:text-primary">Contact</a>
           </div>
@@ -310,7 +310,7 @@ export function Landing() {
                   <CalendarCheck className="h-4 w-4" /> Book 1:1 Integration Call
                 </Button>
               </a>
-              <a href="#voice-demo">
+              <a href="tel:8071580625">
                 <Button size="lg" variant="outline">Demo Call</Button>
               </a>
             </div>

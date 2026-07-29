@@ -8,7 +8,7 @@ import { useAuth } from '@/contexts/AuthContext'
 import {
   Moon, Sun, ArrowRight, Check, Phone, PhoneIncoming, PhoneOutgoing,
   CalendarCheck, Headphones, IndianRupee, FileText, Sparkles, Plus, Minus,
-  MessageSquare, BarChart, UserCheck, Play, Pause, Volume2
+  MessageSquare, BarChart, UserCheck, Play, Pause, Volume2, Menu, X
 } from 'lucide-react'
 
 /* ------------------------------------------------------------------ *
@@ -217,6 +217,7 @@ export function Landing() {
   const { theme, toggleTheme } = useTheme()
   const { createCheckout, isLoading } = usePayment()
   const { user } = useAuth()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
 
   return (
@@ -249,9 +250,26 @@ export function Landing() {
               {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </button>
 
-
+            {/* Mobile menu toggle */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden rounded-md p-2 transition-colors hover:bg-accent"
+            >
+              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile menu content */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden border-t bg-background/95 backdrop-blur px-4 py-4 space-y-4">
+            <a href="#features" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-medium transition-colors hover:text-primary">What it does</a>
+            <a href="#how-it-works" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-medium transition-colors hover:text-primary">How it works</a>
+            <a href="#voice-demo" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-medium transition-colors hover:text-primary">Demo Call</a>
+            <a href="#pricing" onClick={() => setIsMobileMenuOpen(false)} className="block text-base font-medium transition-colors hover:text-primary">Pricing</a>
+            <a href="mailto:hemanthreddykoduru2005@gmail.com?subject=About%20The%20Deal%20My%20Calls" className="block text-base font-medium transition-colors hover:text-primary">Contact</a>
+          </div>
+        )}
       </nav>
 
       {/* ---------- hero ---------- */}
